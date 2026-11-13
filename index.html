@@ -36,26 +36,26 @@
            renderer="antialias: true; alpha: true">
 
     <!-- กล้องที่รู้ตำแหน่ง GPS ของผู้ใช้ · gpsMinDistance = ขยับเกินกี่เมตรจึงอัปเดตตำแหน่ง -->
-    <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
+    <a-camera gps-new-camera="gpsMinDistance: 2"></a-camera>
 
     <!-- หน่วยของขนาดในโหมดนี้คือ "เมตรจริง" วัตถุที่อยู่ห่าง 30 เมตรจึงต้องใหญ่หลายเมตรถึงจะเห็นชัด
          ค่าเริ่มต้นวางจุดไว้รอบพิกัด 0, 0 เพื่อให้ทดลองโหมดจำลอง (?sim) ได้ทันที -->
 
     <!-- ① แก้ได้: จุด A · ใส่ latitude และ longitude ของสถานที่จริงที่วัดมา และเปลี่ยน data-name -->
-    <a-entity data-name="จุด A" gps-new-entity-place="latitude: 0.0003; longitude: 0">
+    <a-entity data-name="จุด A" gps-new-entity-place="latitude: 7.808572; longitude: 99.941149">
       <a-box color="#5A3EBD" scale="4 4 4" position="0 2 0"
              animation="property: rotation; to: 0 360 0; loop: true; dur: 8000; easing: linear"></a-box>
       <a-text face-me value="POINT A" align="center" color="#FFFFFF" width="40" position="0 6 0"></a-text>
     </a-entity>
 
     <!-- ② แก้ได้: จุด B · ลองเปลี่ยนสี ขนาด หรือเปลี่ยน a-sphere เป็น a-cylinder -->
-    <a-entity data-name="จุด B" gps-new-entity-place="latitude: 0; longitude: 0.0003">
+    <a-entity data-name="จุด B" gps-new-entity-place="latitude: 7.808302; longitude: 99.941419">
       <a-sphere color="#FF78AA" radius="2.5" position="0 2.5 0"></a-sphere>
       <a-text face-me value="POINT B" align="center" color="#FFFFFF" width="40" position="0 7 0"></a-text>
     </a-entity>
 
     <!-- ③ แก้ได้: จุด C · ป้ายข้อความล้วน (ใช้ภาษาอังกฤษ เพราะ a-text แสดงภาษาไทยไม่ได้) -->
-    <a-entity data-name="จุด C" gps-new-entity-place="latitude: -0.0003; longitude: 0">
+    <a-entity data-name="จุด C" gps-new-entity-place="latitude: 7.808032; longitude: 99.941149">
       <a-entity face-me position="0 4 0">
         <a-plane color="#2A1B5C" width="14" height="5"></a-plane>
         <a-text value="WELCOME C" align="center" color="#FFCE54" width="40" position="0 0 0.1"></a-text>
@@ -63,7 +63,7 @@
     </a-entity>
 
     <!-- ④ ท้าทาย: คัดลอกบล็อก a-entity ทั้งก้อนมาวางเพิ่มเป็นจุด D ที่ตำแหน่งใหม่ -->
-    <a-entity data-name="จุด D" gps-new-entity-place="latitude: 0; longitude: -0.0003">
+    <a-entity data-name="จุด D" gps-new-entity-place="latitude: 7.808302; longitude: 99.940879">
       <a-cylinder color="#4CC9A0" radius="1.5" height="5" position="0 2.5 0"
                   animation="property: position; to: 0 4 0; dir: alternate; loop: true; dur: 1500; easing: easeInOutSine"></a-cylinder>
       <a-text face-me value="POINT D" align="center" color="#FFFFFF" width="40" position="0 8 0"></a-text>
